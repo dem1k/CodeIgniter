@@ -7,14 +7,16 @@ class Shop extends CI_Controller {
         'man'=>'Мужская одежда',
         'kids'=>'Детская одежда',
     ];
+
     public function index()
     {
         $data['template'] = 'product';
-        $this->load->view('layout',[]);
+        $data['menu'] = $this->categoriesArray;
+        $this->load->view('layout',$data);
     }
 
     public function product() {
-
+        $data['menu'] = $this->categoriesArray;
         $id = $this->uri->segment(2);
         $data['template'] = 'product';
         $data['id'] = $id;
@@ -23,6 +25,8 @@ class Shop extends CI_Controller {
 
     public function category() {
         $name = $this->uri->segment(2);
+        $data['menu'] = $this->categoriesArray;
+
         if(!$name || empty($this->categoriesArray[$name]))
         {
             show_404();

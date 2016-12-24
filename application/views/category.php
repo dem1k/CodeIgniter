@@ -1,4 +1,7 @@
-
+<ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li class="active"><a href="#"><?php echo $name?> </a></li>
+</ol>
     <div class="row">
         <div class="col-sm-4">
             <div class="panel panel-primary">

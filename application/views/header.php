@@ -76,10 +76,7 @@
     </div>
     <!-- /.container -->
 </nav>
-<ol class="breadcrumb">
-    <li><a href="#">Home</a></li>
-    <li class="active"><a href="#"><?php echo $name?> </a></li>
-</ol>
+
 
 
 
