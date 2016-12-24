@@ -53,4 +53,5 @@ $route['default_controller'] = 'shop';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['shop'] = 'shop/index';
-$route['product/:num'] = 'shop/product';
+$route['product/:any'] = 'shop/product';
+$route['category/:any'] = 'shop/category';
