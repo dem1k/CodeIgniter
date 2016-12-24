@@ -7,6 +7,7 @@ class Shop extends CI_Controller {
     {
        $this->load->view('layout');
     }
+
     public function product() {
 
     }
