@@ -20,6 +20,13 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+        $users_arr = [
+            ['last_name'=>'Demidov','first_name'=>'A','middle_name'=>'G'],
+            ['last_name'=>'Demidov','first_name'=>'V','middle_name'=>'G'],
+            ['last_name'=>'Demidova','first_name'=>'V','middle_name'=>'V'],
+            ['last_name'=>'Demidova','first_name'=>'M','middle_name'=>'N'],
+        ];
+
+		$this->load->view('welcome_message', [ 'f' => $users_arr ]);
 	}
 }
